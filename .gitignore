@@ -1,0 +1,24 @@
+# .gitignore — frankie-os
+# Proteger credenciales y archivos locales en todos los lóbulos
+
+# Variables de entorno reales
+.env
+**/.env
+!**/.env.template
+
+# Archivos de sesión y caché
+*.log
+*.tmp
+__pycache__/
+.pytest_cache/
+node_modules/
+
+# Configs locales de herramientas
+.hermes/
+*.local.yaml
+*.local.json
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini

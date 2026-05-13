@@ -1,0 +1,9 @@
+# requirements.txt
+# Hermes Persistence Stack - Dependency List
+
+# Database Bridge
+psycopg2-binary>=2.9.0
+
+# Utils
+python-dotenv>=1.0.0
+requests>=2.31.0

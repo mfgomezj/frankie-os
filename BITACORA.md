@@ -14,6 +14,39 @@ Memoria operativa del sistema Frankie. Multi-autor. Cada entrada firmada.
 
 ---
 
+### 2026-05-13 07:40 UTC — MIGRACIÓN COMPLETADA: Trilobular Sync
+**Autor:** Frankie Arquitecto (Antigravity)
+
+**Qué se hizo:**
+- Se completó la migración física de archivos desde `PROYECTO_FUNNELSFOUNDRY.AI`.
+- **Estructura finalizada:**
+  - `core/`: Wiki, metodologías, inventarios y skills globales.
+  - `subagents/hermes/`: Motor de orquestación omnicanal.
+  - `replication-pack/`: Paquete de clonación del sistema.
+  - `docs/diagrams/`: Excalidraw y mapas mentales.
+- Se configuró `AGENTS.md` con las reglas de oro del sistema.
+- Se sincronizaron los repositorios `milton-brain` (Personal) y `funnelsfoundry-ai` (Comercial).
+
+**Archivos tocados:**
+- `core/` ← MIGRADO
+- `subagents/hermes/` ← MIGRADO
+- `AGENTS.md` ← CREADO
+- `BITACORA.md` ← esta entrada
+
+**Decisiones tomadas:**
+1. **SSOT Establecido**: Este repo es el corazón del sistema. Nada fuera de aquí es "sistema".
+2. **Modularidad**: Los scripts comerciales en `funnelsfoundry-ai` ahora llaman a este repo como dependencia.
+
+**Pendientes / siguiente paso:**
+- [ ] Inicializar los 3 repositorios en GitHub.
+- [ ] Milton: Revisar `milton-brain` y verificar que sus activos personales estén a salvo.
+- [ ] Probar el lóbulo PC llamando a un script de `core/scripts/`.
+
+**Riesgos:**
+- Posibles roturas de links en documentos Markdown si se referenciaban con rutas absolutas locales viejas.
+
+---
+
 ## Entradas
 
 ### 2026-05-13 07:15 UTC — Inicialización del repo frankie-os

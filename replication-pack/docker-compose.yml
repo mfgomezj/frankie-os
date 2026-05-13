@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: engram-db
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER:-gentleman}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-hermes_secret_2026}
+      POSTGRES_DB: ${DB_NAME:-engram}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
+    driver: local

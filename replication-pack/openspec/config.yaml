@@ -1,0 +1,61 @@
+# openspec/config.yaml
+schema: spec-driven
+
+context: |
+  Project: HermesPersistence
+  Tech stack: Docker Compose, PostgreSQL 15, Python 3, Bash
+  Architecture: Orchestrated Infrastructure as Code
+  Versions: Gentle AI v1.26.5, Engram v1.15.10, Hermes v0.13.0
+  Testing: Not initialized
+
+strict_tdd: false
+
+testing:
+  ## Testing Capabilities
+  Strict TDD Mode: disabled
+  Detected: 2026-05-08
+
+  ### Test Runner
+  - Command: "N/A"
+  - Framework: "None detected"
+
+  ### Test Layers
+  | Layer | Available | Tool |
+  |-------|-----------|------|
+  | Unit | ❌ | — |
+  | Integration | ❌ | — |
+  | E2E | ❌ | — |
+
+  ### Coverage
+  - Available: ❌
+  - Command: "N/A"
+
+  ### Quality Tools
+  | Tool | Available | Command |
+  |------|-----------|---------|
+  | Linter | ❌ | — |
+  | Type checker | ❌ | — |
+  | Formatter | ❌ | — |
+
+rules:
+  proposal:
+    - Include rollback plan for risky changes
+    - Identify affected modules/packages
+  specs:
+    - Use Given/When/Then format for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+  design:
+    - Include sequence diagrams for complex flows
+    - Document architecture decisions with rationale
+  tasks:
+    - Group tasks by phase (infrastructure, implementation, testing)
+    - Use hierarchical numbering (1.1, 1.2, etc.)
+    - Keep tasks small enough to complete in one session
+  apply:
+    - Follow existing code patterns and conventions
+    - Load relevant coding skills for the project stack
+  verify:
+    - Run tests if test infrastructure exists
+    - Compare implementation against every spec scenario
+  archive:
+    - Warn before merging destructive deltas (large removals)

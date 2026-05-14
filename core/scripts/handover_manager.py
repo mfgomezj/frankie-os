@@ -18,11 +18,21 @@ class HandoverManager:
     def __init__(self, project_path: str):
         self.project_path = Path(project_path)
         self.project_name = self.project_path.name
-        # Cargar .env desde la raíz del proyecto o desde el agente de Hermes si existe
-        env_path = self.project_path / "HERMES" / "hermes-agent" / ".env"
-        if env_path.exists():
-            load_dotenv(env_path)
-        else:
+        # Intentar cargar .env desde la raíz del proyecto (PC/Cloud) o desde hermes-agent
+        possible_envs = [
+            self.project_path / ".env",
+            self.project_path / "HERMES" / "hermes-agent" / ".env",
+            Path.cwd() / ".env"
+        ]
+        
+        env_loaded = False
+        for env_p in possible_envs:
+            if env_p.exists():
+                load_dotenv(env_p)
+                env_loaded = True
+                break
+        
+        if not env_loaded:
             load_dotenv()
             
         self.notion_token = os.getenv("NOTION_ACCESS_TOKEN") # Usando el nombre del .env de Hermes

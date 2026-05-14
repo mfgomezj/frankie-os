@@ -1,0 +1,12 @@
+[submodule "subagents/agent-teams-lite"]
+	path = subagents/agent-teams-lite
+	url = https://github.com/Gentleman-Programming/agent-teams-lite
+[submodule "subagents/dots"]
+	path = subagents/dots
+	url = https://github.com/Gentleman-Programming/Gentleman.Dots
+[submodule "subagents/guardian-angel"]
+	path = subagents/guardian-angel
+	url = https://github.com/Gentleman-Programming/Gentleman-guardian-angel
+[submodule "subagents/openspec-src"]
+	path = subagents/openspec-src
+	url = https://github.com/fission-ai/openspec

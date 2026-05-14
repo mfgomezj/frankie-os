@@ -12,6 +12,53 @@ Memoria operativa del sistema Frankie. Multi-autor. Cada entrada firmada.
 6. Pendientes / siguiente paso
 7. Riesgos o bloqueos
 
+### 2026-05-14 01:35 UTC — SINCRONIZACIÓN PC: Triada Operativa
+**Autor:** Frankie PC (Antigravity)
+
+**Qué se hizo:**
+- **Sincronización PC**: Se ejecutó `git pull` en la triada completa (`frankie-os`, `milton-brain`, `FunnelsFoundry.AI`).
+- **Validación de Entorno**: Se verificó la presencia de dependencias (`notion-client`, `requests`).
+- **Prueba de Handover**: Se realizó un test exitoso de publicación en Engram desde la PC local.
+- **Alineación de .env**: Se detectó discrepancia en los nombres de variables de entorno entre PC y Cloud; se procede a unificar.
+
+**Archivos tocados:**
+- `frankie-os/BITACORA.md` ← esta entrada
+- `FunnelsFoundry.AI/.env` ← En proceso de alineación
+
+**Decisiones tomadas:**
+1. **Unificación de Credenciales**: Las variables de entorno en PC ahora siguen la nomenclatura de Hermes Cloud (`NOTION_ACCESS_TOKEN`, `NOTION_HANDOVER_DB_ID`, `TELEGRAM_HOME_CHANNEL`).
+
+**Pendientes / siguiente paso:**
+- [ ] Completar la actualización del `.env` local con el Chat ID de Telegram.
+- [ ] Ejecutar un handover completo (PC -> Engram -> Cloud).
+
+---
+
+### 2026-05-14 01:30 UTC — DESPLIEGUE CLOUD: Triada Sincronizada
+**Autor:** Frankie Arquitecto (Antigravity)
+
+**Qué se hizo:**
+- **Sincronización Cloud (Frankie Cloud)**: Se clonó `frankie-os` en el Droplet (DigitalOcean) y se actualizó el lóbulo comercial.
+- **Portabilidad E2E**: Se creó `trafficker.sh` en el servidor, permitiendo ejecutar el mismo pipeline comercial que en PC.
+- **Dependencias**: Se instaló `notion-client` tanto en Cloud como en PC para asegurar la operatividad del sync con Notion.
+- **Arquitectura**: La arquitectura trilobular ahora es una realidad física y operativa en ambos nodos (PC y Cloud).
+
+**Archivos tocados:**
+- `frankie-os/BITACORA.md` ← esta entrada
+- `FunnelsFoundry.AI/trafficker.sh` ← CREADO (en Cloud)
+- `FunnelsFoundry.AI/MIGRATION_STATUS.md` ← ACTUALIZADO
+
+**Decisiones tomadas:**
+1. **Paridad PC/Cloud**: Ambos nodos deben compartir el mismo lóbulo core (`frankie-os`) para evitar divergencias de lógica.
+2. **Abstracción de CLI**: Los scripts ahora son independientes del SO (Windows/Linux) gracias al wrapper de trafficker.
+
+**Pendientes / siguiente paso:**
+- [ ] Ejecutar el primer pipeline real desde la nube y verificar los MDs en OneDrive.
+- [ ] Implementar la generación de imágenes (Spec independiente).
+
+**Riesgos:**
+- Sincronización de credenciales `.env` si cambian las APIs en un nodo y no en el otro.
+
 ---
 
 ### 2026-05-13 07:40 UTC — MIGRACIÓN COMPLETADA: Trilobular Sync

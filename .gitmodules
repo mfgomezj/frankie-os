@@ -10,3 +10,6 @@
 [submodule "subagents/openspec-src"]
 	path = subagents/openspec-src
 	url = https://github.com/fission-ai/openspec
+[submodule "subagents/hermes"]
+	path = subagents/hermes
+	url = https://github.com/nousresearch/hermes-agent

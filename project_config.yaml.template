@@ -1,0 +1,35 @@
+# Template de Contrato de Metadatos de Proyecto
+# Este archivo define cómo un lóbulo de Frankie debe interpretar la estructura de un proyecto Spoke.
+
+project_id: "nombre-del-proyecto" # ej: jobnearme
+version: "1.0.0"
+owner: "Milton" # Siempre Milton, por Ley de AGENTS.md
+
+# Rutas relativas a la raíz del proyecto
+paths:
+  specs: "./specs"
+  scripts: "./scripts"
+  content: "./content"
+  bitacora: "./BITACORA.md"
+  n8n_workflows: "./n8n_workflows"
+  mcps: "./mcps"
+
+# Configuración de Integraciones (Notion, etc)
+integrations:
+  notion:
+    enabled: true
+    database_id: "" # UUID de la base de datos en Notion
+    sync_mode: "bidirectional" # o "push_only"
+
+# Variables de entorno requeridas (nombres, no valores)
+required_env:
+  - WORDPRESS_URL
+  - WORDPRESS_USER
+  - WORDPRESS_APP_PASSWORD
+  - TELEGRAM_BOT_TOKEN
+  - TELEGRAM_CHAT_ID
+
+# Hooks de ejecución (opcional)
+hooks:
+  pre_run: "" # script a ejecutar antes del workflow principal
+  post_run: "" # script a ejecutar después del workflow principal

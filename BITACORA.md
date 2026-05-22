@@ -12,6 +12,60 @@ Memoria operativa del sistema Frankie. Multi-autor. Cada entrada firmada.
 6. Pendientes / siguiente paso
 7. Riesgos o bloqueos
 
+---
+
+### 2026-05-22 06:47 UTC — Autopista de Información Agéntica y Sincronización Global (V20)
+**Autor:** Frankie Arquitecto (Antigravity)
+
+**Qué se hizo:**
+1. **Identidad y Soberanía**: Refactorizamos `SOUL.md` para integrar la soberanía indiscutible de Milton en el Sección 0 (Cabecera).
+2. **Protocolos Cognitivos V20**: Reestructuramos `AGENTS.md` para incorporar formalmente los filtros HITL Nivel 1 y Nivel 2 (deducibilidad DIAN Art. 107 E.T.), bucle fonético automático ("Louis Jeans" -> "Loys Jean's"), prevención de duplicados de nombres comunes y compresión local .webp de imágenes.
+3. **Arranque Rápido**: Actualizamos `BOOTSTRAP.md` para simplificar la inicialización del agente cruzada entre los tres repositorios.
+4. **Cierre de Cambios**: Creamos y registramos el estado final de la especificación bajo `openspec/changes/frankie-v20-highway` en el core comercial.
+
+**Archivos tocados:**
+- `SOUL.md` (Refactorizado)
+- `AGENTS.md` (Actualizado)
+- `BOOTSTRAP.md` (Actualizado)
+- `BITACORA.md` (Esta entrada)
+
+**Decisiones tomadas:**
+- Consolidar la soberanía del creador e identidad del agente en el núcleo del sistema operativo.
+- Unificar las reglas cognitivas de manera estricta para evitar alucinaciones.
+
+**Pendientes / siguiente paso:**
+- Validar la consistencia y realizar el snapshot final en Engram.
+
+**Riesgos o bloqueos:**
+- Ninguno.
+
+---
+
+### 2026-05-15 18:05 UTC — NACIMIENTO: Spec Agent
+**Autor:** Frankie Arquitecto (Antigravity)
+
+**Qué se hizo:**
+- **Inicialización de Subagente**: Se creó y configuró formalmente el **Spec Agent** en `subagents/spec-agent/`.
+- **Estructura Especializada**: Se definieron `SOUL.md` (persona analítica y rigurosa), `README.md` (workflow SDD y KPIs) y `BITACORA.md`.
+- **Alineación Arquitectural**: El agente cumple con los estándares definidos en la Arquitectura Trilobular (SPEC-2026-003).
+- **Misión**: El Spec Agent asume la responsabilidad de la fase de especificaciones (SDD Spec) para garantizar la viabilidad técnica y claridad de cada cambio.
+
+**Archivos tocados:**
+- `subagents/spec-agent/SOUL.md` ← CREADO
+- `subagents/spec-agent/README.md` ← CREADO
+- `subagents/spec-agent/BITACORA.md` ← CREADO
+- `frankie-os/BITACORA.md` ← esta entrada
+
+**Decisiones tomadas:**
+1. **Identidad Analítica**: El Spec Agent es el guardián del rigor. No es un ejecutor, es un arquitecto de requisitos.
+2. **Independencia Operativa**: El agente tiene su propia bitácora y estructura, permitiendo su escalado o delegación futura sin fricción.
+
+**Pendientes / siguiente paso:**
+- [ ] Ejecutar la primera especificación (SDD Spec) usando la nueva identidad del agente.
+- [ ] Vincular la skill `cognitive-doc-design` como herramienta primaria del Spec Agent.
+
+---
+
 ### 2026-05-14 01:35 UTC — SINCRONIZACIÓN PC: Triada Operativa
 **Autor:** Frankie PC (Antigravity)
 

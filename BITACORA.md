@@ -14,6 +14,33 @@ Memoria operativa del sistema Frankie. Multi-autor. Cada entrada firmada.
 
 ---
 
+### 2026-05-28 21:17 UTC — Sincronización de Submódulos e Integración de Nanochat en Sandbox
+**Autor:** Frankie Arquitecto (Antigravity) & Milton
+
+**Qué se hizo:**
+1. **Actualización de Submódulos:** Sincronizamos las referencias de los submódulos `subagents/dots`, `subagents/hermes` y `subagents/openspec-src` con sus últimos commits estables para unificar el estado operativo del ecosistema agéntico.
+2. **Entorno Aislado de Pruebas:** Agregamos el submódulo `_sandbox/nanochat` como un espacio de trabajo experimental para iterar sobre interfaces interactivas de chat ultra-ligeras sin alterar el core del sistema operativo.
+
+**Archivos tocados:**
+- `subagents/dots` (Referencia actualizada)
+- `subagents/hermes` (Referencia actualizada)
+- `subagents/openspec-src` (Referencia actualizada)
+- `_sandbox/nanochat` (Nuevo submódulo registrado)
+- `BITACORA.md` (Esta entrada)
+
+**Decisiones tomadas:**
+- Consolidar los submódulos agénticos en sus estados más recientes antes de avanzar con desarrollos mayores.
+- Aislar por completo los experimentos y prototipos de chat interactivo bajo el directorio `_sandbox/` para proteger la estabilidad de la rama principal (`main`).
+
+**Pendientes / siguiente paso:**
+- Probar localmente la funcionalidad interactiva dentro del sandbox `nanochat`.
+- Empujar los cambios confirmados a `origin/main`.
+
+**Riesgos o bloqueos:**
+- Ninguno detectado.
+
+---
+
 ### 2026-05-22 06:47 UTC — Autopista de Información Agéntica y Sincronización Global (V20)
 **Autor:** Frankie Arquitecto (Antigravity)
 

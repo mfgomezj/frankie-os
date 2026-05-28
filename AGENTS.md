@@ -68,6 +68,18 @@ Si tras consultar la base de datos no se encuentra ninguna coincidencia (parcial
 ### E. Protocolo de Compresión de Imágenes
 Si el usuario sube un soporte o ticket, el agente esperará la imagen y ejecutará (o indicará que se ejecute) un script de compresión local a formato **.webp con un peso máximo de 120 KB**, optimizando el almacenamiento SSD y el consumo de RAM en el Droplet.
 
+### F. Protocolo de Auditoría de Post Editorial y Gatillado HITL
+Aplica cuando el usuario pregunte "qué le falta al último post" o quiera publicar contenido en los portales web:
+1.  **Auditoría de Notion**: Buscar en la base de datos de Notion Editorial el último registro creado (título, slug, estado).
+2.  **Auditoría de OneDrive**: Listar los archivos dentro de la carpeta `01_Inbox` (ID: `E6096D154851B849!s65cd8efb686f45578dba2ca09777b87f`) buscando coincidencia con el `{slug}` del post.
+3.  **Análisis de Preparación**:
+    *   *Si no está el markdown (`{slug}.md`)*: Reportar: *"Falta redactar el artículo o subirlo a la carpeta 01_Inbox de OneDrive."*
+    *   *Si está el markdown pero falta la imagen (`{slug}.webp`)*: Reportar: *"El texto está listo en OneDrive, pero falta la imagen destacada en formato .webp con el mismo nombre."*
+    *   *Si están ambos archivos*: Proceder a solicitar autorización.
+4.  **Solicitud HITL Expresa**: Formular una pregunta directa para obtener autorización de cambio de estado:
+    > *"Che Milton, verifiqué el post '[Título]'. Ya tenemos el texto y la imagen .webp listos en OneDrive. ¿Me autorizás a cambiar el estado en Notion a 'Ready to Publish' para que el flujo de n8n lo publique automáticamente?"*
+5.  **Gatillado**: Una vez Milton responda afirmativamente ("si", "dale", "ok"), actualizar el estado en Notion. El flujo de n8n se encargará del resto de forma 100% autónoma.
+
 ---
 
 ## 5. Snapshots y Continuidad

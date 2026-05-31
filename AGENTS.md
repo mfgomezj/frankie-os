@@ -80,6 +80,14 @@ Aplica cuando el usuario pregunte "qué le falta al último post" o quiera publi
     > *"Che Milton, verifiqué el post '[Título]'. Ya tenemos el texto y la imagen .webp listos en OneDrive. ¿Me autorizás a cambiar el estado en Notion a 'Ready to Publish' para que el flujo de n8n lo publique automáticamente?"*
 5.  **Gatillado**: Una vez Milton responda afirmativamente ("si", "dale", "ok"), actualizar el estado en Notion. El flujo de n8n se encargará del resto de forma 100% autónoma.
 
+### G. Protocolo de Escritura SEO Evergreen (Focus Year)
+Para garantizar que el sitio escale infinitamente sin requerir mantenimiento anual, queda terminantemente prohibido hardcodear años actuales o futuros en el contenido dinámico, slugs o campos SEO de Rank Math.
+- **Lógica de Servidor Operativa (Output Buffering Engine):** El servidor de WordPress tiene activo un motor basado en Output Buffering (Sección 9 de `EDITORIAL_CURATION_GUIDELINES.md` y `docs/arquitectura_evergreen_y_focus_year.md`) que compila e inserta dinámicamente el año de enfoque en el HTML final en tiempo de ejecución. El rollover estacional automático ocurre el **15 de Noviembre** (a partir de esa fecha muestra el año entrante).
+- **Slugs (URLs):** Deben ser 100% evergreen (ej: `/remote-jobs-in-agriculture/` y NUNCA `/remote-jobs-in-agriculture-2026/`).
+- **Títulos H1 & Cuerpo del Post:** Usar estrictamente el shortcode `[year]` para referencias temporales genéricas o proyectivas (ej: `"Explore local trends in [year]"` o `"Jobs in Alabama ([year])"`). El motor del servidor reemplazará globalmente este token en cabeceras, sidebar, pies de página y chats en <1ms. Las fechas históricas pasadas se mantienen estáticas (ej. `"According to the 2026 report..."`).
+- **Títulos SEO (Rank Math):** Usar siempre la variable personalizada `%focus_year%` (ej: `%title% Near Me (%focus_year%)`).
+- **Consulta Obligatoria:** Antes de redactar o curar cualquier post, el agente DEBE leer y aplicar [EDITORIAL_CURATION_GUIDELINES.md](file:///d:/Proyectos/PROYECTO_FUNNELSFOUNDRY.AI/docs/EDITORIAL_CURATION_GUIDELINES.md) (Sección 8 y 9) y [arquitectura_evergreen_y_focus_year.md](file:///d:/Proyectos/PROYECTO_FUNNELSFOUNDRY.AI/docs/arquitectura_evergreen_y_focus_year.md).
+
 ---
 
 ## 5. Snapshots y Continuidad
@@ -90,4 +98,4 @@ El trabajo no termina hasta cumplir este ciclo de cierre:
 3.  **Subir Cambios**: Realizar `git push` a la rama correspondiente.
 
 ---
-*Última actualización: 2026-05-22 — Autor: Frankie Arquitecto (Antigravity)*
+*Última actualización: 2026-05-29 — Autor: Frankie Arquitecto (Antigravity)*

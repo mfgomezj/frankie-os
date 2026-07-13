@@ -208,3 +208,78 @@ Memoria operativa del sistema Frankie. Multi-autor. Cada entrada firmada.
 
 **Riesgos:**
 - La migración de contenido desde el repo anterior debe hacerse bloque por bloque. No migrar todo de una vez.
+
+---
+
+### 2026-07-13 19:30 UTC — BOOTSTRAP FRANKIE PC (HERMES): Identidad Asumida y Recursos Cargados
+**Autor:** Frankie PC (Hermes)
+
+**Qué se hizo:**
+1. **Bootstrap completo**: Leí y asimilé `SOUL.md`, `AGENTS.md` (V20), `BOOTSTRAP.md`, `BITACORA.md` del repo `frankie-os`.
+2. **Exploración del ecosistema**: Recorrí `D:\Proyectos` y confirmé la arquitectura trilobular:
+   - `frankie-os` (este repo — cerebro operativo)
+   - `milton-brain` (cerebro personal/administrativo de Milton)
+   - `PROYECTO_FUNNELSFOUNDRY.AI` (lóbulo comercial: Jobnearme.online, SEO pipeline, n8n)
+3. **Confirmación de identidad**: Acepté y declaré que **Hermes Agent en Windows Git-Bash = Frankie PC** (`lobes/pc/`). No hay distinción: la herramienta es vestidura, el agente es Frankie.
+4. **Carga de protocolos cognitivos V20**: HITL N1/N2 (DIAN Art.107), corrección fonética automática (Loys Jean's / Jobnearme.online), anti-duplicados, compresión .webp ≤120KB, SEO evergreen ([year]/%focus_year%), 2-Failure Stop, SSOT GitHub→Engram→Notion→Telegram.
+5. **Modo por defecto activado**: A partir de ahora opero **siempre** como Frankie PC (Hermes) con todos los recursos: terminal, file, browser, web_search, delegate_task, cronjob, memory, skills, image_generate, vision, execute_code, etc.
+
+**Archivos tocados:**
+- `BITACORA.md` (esta entrada)
+
+**Decisiones tomadas:**
+- Identidad unificada confirmada: **Frankie PC (Hermes)** es el modo por defecto de esta sesión y de todas las futuras en este entorno.
+- No se requiere "cambio de contexto" — el bootstrap se hizo una vez y persiste en memoria operativa.
+
+**Pendientes / siguiente paso:**
+- A la espera de directivas del Director (Milton) para el próximo bloque de trabajo.
+
+**Riesgos o bloqueos:**
+- Ninguno. Sistema operativo y en contexto.
+
+---
+
+### 2026-07-13 20:15 UTC — STACK REVIEW & SUBMODULE SYNC: Herramientas Base Validadas
+**Autor:** Frankie PC (Hermes)
+
+**Qué se hizo:**
+1. **Submódulos actualizados a latest upstream**:
+   - `subagents/dots` → v2.12.2 (0258450)
+   - `subagents/guardian-angel` → v2.10.1 (fbf1091)
+   - `subagents/openspec-src` → v1.6.0 (0a99f41)
+   - `subagents/hermes` → v2026.7.7 (7fdae5d22)
+   - `subagents/agent-teams-lite` → deprecado (apunta a gentle-ai)
+
+2. **Herramientas globales verificadas (instalación única, sin duplicar)**:
+   - `gentle-ai` v1.28.3 (scoop) — **NOTA**: usuario mencionaba v1.26.5, scoop tiene 1.28.3
+   - `engram` v1.16.1 (Go build en `~/go/bin`) — **NOTA**: usuario mencionaba v1.15.10
+   - `agent-teams-lite` → **deprecado**, usar `gentle-ai`
+   - `guardian-angel` (gga) → via submodule actualizado
+   - `dots` (gentleman-dots) → via submodule actualizado
+
+3. **Bloqueo conocido (Windows AppLocker)**:
+   - Binarios Go (`engram.exe`, `gentle-ai.exe`) instalados pero **bloqueados por política de ejecución de Windows**
+   - No es error de instalación; es política de seguridad del SO
+   - Workaround: usar herramientas nativas de Hermes (terminal, file, browser, delegate_task, skills, cronjob, etc.) que corren en bash/Git-Bash sin restricción
+
+4. **Arquitectura confirmada — Sin duplicación**:
+   - Frankie Architect usa las MISMAS instalaciones globales que Frankie PC
+   - Herramientas = vestidura; Frankie = agente único
+   - Submódulos en `frankie-os/subagents/` = referencia de código/fuente, no binarios
+
+**Archivos tocados:**
+- `frankie-os/subagents/dots`, `guardian-angel`, `openspec-src`, `hermes` (submodule refs)
+- `BITACORA.md` (esta entrada)
+
+**Decisiones tomadas:**
+- No clonar `gentle-ai` ni `engram` en `D:\Proyectos\` — ya existen globalmente
+- No instalar duplicados — viola principio "herramientas son vestidura, una sola instalación"
+- Operar con stack nativo de Hermes (bash, git, python, skills) mientras se resuelve AppLocker a nivel SO
+
+**Pendientes / siguiente paso:**
+- Usuario: revisar política AppLocker / firmar binarios / añadir excepción para `~/go/bin` y `~/scoop/apps`
+- A la espera de directivas del Director para próximo bloque de trabajo
+
+**Riesgos o bloqueos:**
+- AppLocker impide invocar `engram` y `gentle-ai` desde CLI (binarios Go no firmados)
+- Stack funcional al 90%: submodules ✓, git ✓, bash ✓, Hermes tools ✓, skills ✓, MCP nativo ⚠
